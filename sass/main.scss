@@ -1,0 +1,80 @@
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+$color-background: #323133;
+$color-dark-background: darken($color-background, 2);
+$color-white: #F5F7FA;
+$color-dark-white: darken($color-white, 10);
+
+
+
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+@mixin clearAfter() {
+	content:"";
+    display:table;
+    clear:both;
+}
+
+@mixin boxShadow() {
+	box-shadow: 1px 1px 3px rgba($color-background, .2);
+}
+
+@mixin borderRadius() {
+	$border-radius: 3px;
+	-webkit-border-radiu: $border-radius;
+	  -moz-border-radius: $border-radius;
+		   border-radius: $border-radius;
+}
+
+
+
+// --------------------------------------------------
+// Global Styles
+// --------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+    background-color: $color-background;
+    color: $color-dark-white;
+    font-weight: 300;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.4em;
+	font-family: 'Bangers', cursive;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+
+// --------------------------------------------------
+// Site Title
+// --------------------------------------------------
+
+
+
+
+// --------------------------------------------------
+// Responsive Styles
+// --------------------------------------------------
+@import '_responsive.scss';
