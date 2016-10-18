@@ -87,7 +87,7 @@ $(document).ready(function()
 			// Build characters HTML
 			characterElement += 
 			`
-				<div data-id="${character.id}" class="col-md-2 comic-listing">
+				<div data-id="${character.id}" class="col-xs-4 col-md-2 comic-listing">
 					<img class="character-image" src="${character.image}" alt="${character.name}">
 					<h4 class="character-name">${character.name}</h4>
 					<button class="btn marvel btn-character">View Details</button>

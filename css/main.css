@@ -57,6 +57,7 @@ h3.marvel {
 
 header {
   width: 100%;
+  height: 58px;
   margin-top: 20px; }
   header .logo {
     width: 20%;
@@ -64,7 +65,14 @@ header {
     background-color: #e23636;
     float: left; }
     header .logo .logo-image {
+      height: 18px;
       float: right; }
+  header #hamburgerMenu {
+    padding: 20px 24px 18px;
+    background-color: #e86363;
+    color: white;
+    border: none;
+    display: none; }
   header nav {
     width: 80%;
     float: right;
@@ -81,9 +89,9 @@ header {
           font-weight: bold;
           text-transform: uppercase;
           color: white;
-          background-color: rgba(226, 54, 54, 0.8);
+          background-color: #e86363;
           padding: 19px 20px 20px; }
-          header nav ul li a:hover, header nav ul li a:active {
+          header nav ul li a:hover, header nav ul li a:active, header nav ul li a.active {
             background-color: #e23636;
             color: white;
             text-decoration: none; }
@@ -119,3 +127,39 @@ header {
   .contact .text-input:focus,
   .contact .message-input:focus {
     border: 2px solid #e23636; }
+
+@media screen and (max-width: 900px) {
+  header {
+    height: 58px;
+    position: relative;
+    z-index: 100; }
+    header .logo {
+      width: auto; }
+    header #hamburgerMenu {
+      display: block; }
+    header nav {
+      width: auto;
+      float: left;
+      margin-left: 0; }
+      header nav ul {
+        width: 282px;
+        padding: 20px;
+        position: absolute;
+        left: -300px;
+        top: 38px;
+        transition: all 1s ease; }
+        header nav ul li {
+          width: 100%;
+          display: block;
+          float: none;
+          overflow: hidden; }
+          header nav ul li a {
+            padding-right: 100%; }
+      header nav:hover ul {
+        left: -20px; } }
+
+@media screen and (max-width: 550px) {
+  .modal-image {
+    max-height: 200px; }
+  .featured img {
+    height: 130px; } }

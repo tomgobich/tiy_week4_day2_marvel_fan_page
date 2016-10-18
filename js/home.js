@@ -105,7 +105,7 @@ $(document).ready(function()
 			// Load HTML block into variable
 			characterElement += 
 			`
-				<div data-id="${character.id}" class="col-md-4">
+				<div data-id="${character.id}" class="col-xs-4">
 					<img class="character-image" src="${character.image}" alt="${character.name}">
 					<h4 class="character-name">${character.name}</h4>
 					<button class="btn marvel btn-character">View Details</button>
@@ -173,7 +173,7 @@ $(document).ready(function()
 			// Load HTML block into variable
 			comicElement +=
 			`
-				<div data-id="${comic.id}" class="col-md-4">
+				<div data-id="${comic.id}" class="col-xs-4">
 					<img class="comic-image" src="${comic.image}" alt="${comic.title}">
 					<h4 class="comic-title">${comic.title}</h4>
 					<p class="comic-price">$${comic.price}</p>

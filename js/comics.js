@@ -87,7 +87,7 @@ $(document).ready(function()
 			// Load data into HTML block
 			comicElement +=
 			`
-				<div data-id="${comic.id}" class="col-md-2 comic-listing">
+				<div data-id="${comic.id}" class="col-xs-4 col-md-2 comic-listing">
 					<img class="comic-image" src="${comic.image}" alt="${comic.title}">
 					<h4 class="comic-title">${comic.title}</h4>
 					<p class="comic-price">$${comic.price}</p>
