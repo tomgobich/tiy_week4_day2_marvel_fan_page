@@ -1,10 +1,13 @@
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-$color-background: #323133;
-$color-dark-background: darken($color-background, 2);
-$color-white: #F5F7FA;
-$color-dark-white: darken($color-white, 10);
+$color-background: #f3f3f3;
+$color-text: #333;
+$color-red: #e23636;
+$color-black: black;
+$color-gray: #504a4a;
+$color-blue: #518cca;
+$color-orange: #f78f3f;
 
 
 
@@ -23,7 +26,7 @@ $color-dark-white: darken($color-white, 10);
 }
 
 @mixin borderRadius() {
-	$border-radius: 3px;
+	$border-radius: 5px;
 	-webkit-border-radiu: $border-radius;
 	  -moz-border-radius: $border-radius;
 		   border-radius: $border-radius;
@@ -46,7 +49,7 @@ html, body {
 body {
 	font-family: 'Lato', sans-serif;
     background-color: $color-background;
-    color: $color-dark-white;
+	color: $color-text;
     font-weight: 300;
 }
 
@@ -58,18 +61,150 @@ h4,
 h5,
 h6 {
 	line-height: 1.4em;
-	font-family: 'Bangers', cursive;
+	text-transform: uppercase;
 }
 
 img {
 	max-width: 100%;
 }
 
+h1.marvel,
+h2.marvel,
+h3.marvel {
+	font-family: 'Bangers', cursive;
+}
+
+.section-block {
+	padding-top: 40px;
+}
+
+.btn.marvel {
+	font-size: 0.8em;
+	background-color: $color-red;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 10px 15px;
+	outline: none;
+	@include borderRadius();
+
+	&:hover {
+		background-color: darken($color-red, 20);
+	}
+}
+
+.modal-image {
+	max-height: 300px;
+}
+
+.modal-comic-description {
+	text-transform: none;
+}
+
+.comic-listing {
+	padding: 60px 15px;
+}
 
 
 // --------------------------------------------------
-// Site Title
+// Header Styles
 // --------------------------------------------------
+header {
+	width: 100%;
+	margin-top: 20px;
+
+	.logo {
+		width: 20%;
+		padding: 20px;
+		background-color: $color-red;
+		float: left;
+
+		.logo-image {
+			float: right;
+		}
+	}
+
+	nav {
+		width: 80%;
+		float: right;
+		margin-left: -30px;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				padding: 18px 0;
+				float: left;
+
+				a {
+				    font-size: 16px;
+				    font-weight: bold;
+				    text-transform: uppercase;
+				    color: white;
+				    background-color: rgba($color-red, .8);
+				    padding: 19px 20px 20px;
+
+				    &:hover,
+				    &:active {
+				    	background-color: $color-red;
+				    	color: white;
+				    	text-decoration: none;
+				    }
+				}
+			}
+
+			&:after {
+				@include clearAfter();
+			}
+		}
+	}
+}
+
+
+
+// --------------------------------------------------
+// Featured Styles
+// --------------------------------------------------
+.featured {
+
+	img {
+		width: 100%;
+		height: 225px;
+		@include borderRadius();
+	}
+
+	.character-name,
+	.comic-title {
+		height: 60px;
+		font-size: 1em;
+		overflow: hidden;
+	}
+}
+
+
+
+.contact,
+.location {
+	padding-top: 60px;
+}
+
+.contact {
+
+	.text-input,
+	.message-input {
+		width: 100%;
+		padding: 5px;
+		outline: none;
+		border: 2px solid white;
+		margin-bottom: 20px;
+
+		&:focus {
+			border: 2px solid $color-red;
+		}
+	}
+}
 
 
 

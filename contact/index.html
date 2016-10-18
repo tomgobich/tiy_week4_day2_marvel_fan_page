@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marvel Fan Page</title>
+	
+	<!-- Bootstrap Styles -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Site Styles -->
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+</head>
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="logo">
+			<img class="logo-image" src="../images/logo.svg" alt="Marvel Fan Page">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../characters/index.html">Characters</a></li>
+				<li><a class="active" href="index.html">Comics</a></li>
+				<li><a href="../contact/index.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- /header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="row content-section">
+			<div class="col-md-6 contact">
+				<h2>Send Us An Email</h2>
+				<form>
+					<div class="text-input-element">
+						<label class="text-label" for="first_name">First Name</label>
+						<input class="text-input" type="text" name="first_name" placeholder="Jon">
+					</div>
+					<div class="text-input-element">
+						<label class="text-label" for="last_name">Last Name</label>
+						<input class="text-input" type="text" name="last_name" placeholder="Doe">
+					</div>
+					<div class="text-input-element">
+						<label class="text-label" for="email">First Name</label>
+						<input class="text-input" type="email" name="email" placeholder="jon.doe@gmail.com">
+					</div>
+					<div class="text-input-element">
+						<label class="message-label" for="message">Message</label>
+						<textarea class="message-input" name="message"></textarea>
+					</div>
+					<div class="text-input-element">
+						<button type="submit" class="btn marvel">Send Message</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6 location">
+				<h2>Give Us A Call or Visit</h2>
+				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDsVXDgAT8bFBwynKOM_BYQ_js7bZpkg_4'></script><div style='overflow:hidden;height:250px;width:100%;'><div id='gmap_canvas' style='height:400px;width:520px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://embed-map.org/'>add google maps to my website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=0901e46ec1f60217045055256c16ab8913089469'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(54.9995681,-1.4630385000000388),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(54.9995681,-1.4630385000000388)});infowindow = new google.maps.InfoWindow({content:'<strong>Marvel</strong><br>123 Super Ln<br> New York<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+				<div class="store-location">
+					<h3>Marvel</h3>
+					<p>123 Super Ln</p>
+					<p>New York, NY 06510</p>
+					<p>(555) 555 - 5555</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Boostrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Main JavaScript File -->
+	<script src="../js/comics.js"></script>
+
+</body>
+</html>
