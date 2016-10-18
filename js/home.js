@@ -27,13 +27,6 @@ $(document).ready(function()
 	})
 
 
-	// --------------------------------------------------
-	// --------------------------------------------------
-	//
-	// Event Listeners
-	//
-	// --------------------------------------------------
-	// --------------------------------------------------
 
 	// Event listener for character button
 	$('body').on('click', '.btn-character', loadCharacterDetails);
@@ -41,15 +34,7 @@ $(document).ready(function()
 	// Event listener for comic button
 	$('body').on('click', '.btn-comic', loadComicDetails);
 
-	
 
-	// --------------------------------------------------
-	// --------------------------------------------------
-	//
-	// Functions (functionality)
-	//
-	// --------------------------------------------------
-	// --------------------------------------------------
 
 	// --------------------------------------------------
 	// Load character data from API into Object & array
