@@ -98,7 +98,7 @@ $(document).ready(function()
 			// Load HTML block into variable
 			characterElement += 
 			`
-				<div data-id="${character.id}" class="col-xs-4 col-md-2">
+				<div data-id="${character.id}" class="col-xs-4 col-md-2 comic-listing">
 					<img class="character-image" src="${character.image}" alt="${character.name}">
 					<h4 class="character-name">${character.name}</h4>
 					<button class="btn marvel btn-character">View Details</button>
