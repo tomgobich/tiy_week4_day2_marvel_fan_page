@@ -1,6 +1,12 @@
 $(document).ready(function()
 {	
 
+	// DOM selectors
+	var $modal 		= $('#modal');
+	var $modalBody 	= $('#modalBody');
+
+
+
 	// Character array to hold all characters returned from API
 	var characters = [];
 
@@ -157,10 +163,10 @@ $(document).ready(function()
 		});
 
 		// Apply modal body to modal's body
-		$('#modalBody').html(modalBody);
+		$modalBody.html(modalBody);
 
 		// Show modal
-		$('#modal').modal('show'); 
+		$modal.modal('show'); 
 	}
 
 	

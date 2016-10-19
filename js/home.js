@@ -2,6 +2,14 @@ $(document).ready(function()
 {	
 	const FEATURED_COUNT = 6;
 
+
+
+	// DOM selectors
+	var $modal 		= $('#modal');
+	var $modalBody 	= $('#modalBody');
+
+
+
 	// Character array to hold all characters returned from API
 	var characters = [];
 
@@ -77,7 +85,7 @@ $(document).ready(function()
 	{
 		var $featuredCharacters = $('#featuredCharacters');
 		var characterElement = "";
-		
+
 		// Loop until featured count is reached
 		for(let i = 0; i < FEATURED_COUNT; i++)
 		{
@@ -99,7 +107,7 @@ $(document).ready(function()
 		}
 
 		// Append data to parent element
-		$('#featuredCharacters').append(characterElement);
+		$featuredCharacters.append(characterElement);
 	}
 
 
@@ -168,7 +176,7 @@ $(document).ready(function()
 		}
 
 		// Append data to element parent
-		$('#featuredComics').append(comicElement);
+		$featuredComics.append(comicElement);
 	}
 
 
@@ -260,10 +268,10 @@ $(document).ready(function()
 		});
 
 		// Apply modal body to modal's body
-		$('#modalBody').html(modalBody);
+		$modalBody.html(modalBody);
 
 		// Show modal
-		$('#modal').modal('show'); 
+		$modal.modal('show'); 
 	}
 
 
@@ -306,10 +314,10 @@ $(document).ready(function()
 		`;
 
 		// Apply modal body to the modal's body
-		$('#modalBody').html(modalBody);
+		$modalBody.html(modalBody);
 
 		// Show modal
-		$('#modal').modal('show'); 
+		$modal.modal('show'); 
 	}
 
 	

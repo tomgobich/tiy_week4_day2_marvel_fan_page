@@ -1,7 +1,13 @@
 $(document).ready(function()
 {
 
-		// Comic array to hold all comics returned from API
+	// DOM selectors
+	var $modal 		= $('#modal');
+	var $modalBody 	= $('#modalBody');
+
+
+
+	// Comic array to hold all comics returned from API
 	var comics = [];
 
 	// Function constructor for Comic
@@ -139,10 +145,10 @@ $(document).ready(function()
 		`;
 
 		// Apply modal body to the modal's body
-		$('#modalBody').html(modalBody);
+		$modalBody.html(modalBody);
 
 		// Show modal
-		$('#modal').modal('show'); 
+		$modal.modal('show'); 
 	}
 
 	
