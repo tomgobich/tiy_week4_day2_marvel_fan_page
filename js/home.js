@@ -77,10 +77,7 @@ $(document).ready(function()
 	{
 		var $featuredCharacters = $('#featuredCharacters');
 		var characterElement = "";
-		var randomIndexes = [];
-		var isUnique = true;
-		var count = 0;
-
+		
 		// Loop until featured count is reached
 		for(let i = 0; i < FEATURED_COUNT; i++)
 		{
