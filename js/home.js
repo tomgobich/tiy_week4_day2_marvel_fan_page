@@ -1,6 +1,6 @@
 $(document).ready(function()
 {	
-	const FEATURED_COUNT = 3;
+	const FEATURED_COUNT = 6;
 
 	// Character array to hold all characters returned from API
 	var characters = [];
@@ -77,25 +77,41 @@ $(document).ready(function()
 	{
 		var $featuredCharacters = $('#featuredCharacters');
 		var characterElement = "";
+		var randomIndexes = [];
+		var isUnique = true;
+		var count = 0;
 
-		// Loop through amount to show
-		for(let i = 0; i < FEATURED_COUNT; i++)
+		// Loop until elements displayed is equal to featured count
+		while(count < FEATURED_COUNT)
 		{
-			// Get random number from 0 to length of characters array + 1
-			let random = Math.floor(Math.random() * (characters.length + 1));
+			// Get random number from 0 to length of characters array
+			let random = Math.floor(Math.random() * characters.length);
 			
-			// Set active character as random index number
-			var character = characters[random];
+			randomIndexes.forEach(function(number)
+			{
+				if(random === number)
+				{
+					isUnique = false;
+				}
+			});
 
-			// Load HTML block into variable
-			characterElement += 
-			`
-				<div data-id="${character.id}" class="col-xs-4">
-					<img class="character-image" src="${character.image}" alt="${character.name}">
-					<h4 class="character-name">${character.name}</h4>
-					<button class="btn marvel btn-character">View Details</button>
-				</div>
-			`;
+			if(isUnique)
+			{
+				// Set active character as random index number
+				var character = characters[random];
+
+				// Load HTML block into variable
+				characterElement += 
+				`
+					<div data-id="${character.id}" class="col-xs-4 col-md-2">
+						<img class="character-image" src="${character.image}" alt="${character.name}">
+						<h4 class="character-name">${character.name}</h4>
+						<button class="btn marvel btn-character">View Details</button>
+					</div>
+				`;
+
+				count++;
+			}
 		}
 
 		// Append data to parent element
@@ -145,26 +161,42 @@ $(document).ready(function()
 	{
 		var $featuredComics = $('#featuredComics');
 		var comicElement = "";
+		var randomIndexes = [];
+		var isUnique = true;
+		var count = 0;
 
-		// Loop through featured count
-		for(let i = 0; i < FEATURED_COUNT; i++)
+		// Loop until elements displayed is equal to featured count
+		while(count < FEATURED_COUNT)
 		{
-			// Get a random number from 0 to comics length + 1
-			let random = Math.floor(Math.random() * (comics.length + 1));
+			// Get a random number from 0 to comics length
+			let random = Math.floor(Math.random() * comics.length);
 
-			// Set comic at random index as target
-			var comic = comics[random];
+			randomIndexes.forEach(function(number)
+			{
+				if(random === number)
+				{
+					isUnique = false;
+				}
+			});
+			
+			if(isUnique)
+			{
+				// Set comic at random index as target
+				var comic = comics[random];
 
-			// Load HTML block into variable
-			comicElement +=
-			`
-				<div data-id="${comic.id}" class="col-xs-4">
-					<img class="comic-image" src="${comic.image}" alt="${comic.title}">
-					<h4 class="comic-title">${comic.title}</h4>
-					<p class="comic-price">$${comic.price}</p>
-					<button class="btn marvel btn-comic">View Details</button>
-				</div>
-			`;
+				// Load HTML block into variable
+				comicElement +=
+				`
+					<div data-id="${comic.id}" class="col-xs-4 col-md-2">
+						<img class="comic-image" src="${comic.image}" alt="${comic.title}">
+						<h4 class="comic-title">${comic.title}</h4>
+						<p class="comic-price">$${comic.price}</p>
+						<button class="btn marvel btn-comic">View Details</button>
+					</div>
+				`;
+
+				count++;
+			}
 		}
 
 		// Append data to element parent
