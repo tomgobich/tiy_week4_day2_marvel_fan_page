@@ -81,37 +81,24 @@ $(document).ready(function()
 		var isUnique = true;
 		var count = 0;
 
-		// Loop until elements displayed is equal to featured count
-		while(count < FEATURED_COUNT)
+		// Loop until featured count is reached
+		for(let i = 0; i < FEATURED_COUNT; i++)
 		{
 			// Get random number from 0 to length of characters array
 			let random = Math.floor(Math.random() * characters.length);
 			
-			randomIndexes.forEach(function(number)
-			{
-				if(random === number)
-				{
-					isUnique = false;
-				}
-			});
+			// Set active character as random index number
+			var character = characters[random];
 
-			if(isUnique)
-			{
-				// Set active character as random index number
-				var character = characters[random];
-
-				// Load HTML block into variable
-				characterElement += 
-				`
-					<div data-id="${character.id}" class="col-xs-4 col-md-2">
-						<img class="character-image" src="${character.image}" alt="${character.name}">
-						<h4 class="character-name">${character.name}</h4>
-						<button class="btn marvel btn-character">View Details</button>
-					</div>
-				`;
-
-				count++;
-			}
+			// Load HTML block into variable
+			characterElement += 
+			`
+				<div data-id="${character.id}" class="col-xs-4 col-md-2">
+					<img class="character-image" src="${character.image}" alt="${character.name}">
+					<h4 class="character-name">${character.name}</h4>
+					<button class="btn marvel btn-character">View Details</button>
+				</div>
+			`;
 		}
 
 		// Append data to parent element
@@ -161,42 +148,26 @@ $(document).ready(function()
 	{
 		var $featuredComics = $('#featuredComics');
 		var comicElement = "";
-		var randomIndexes = [];
-		var isUnique = true;
-		var count = 0;
 
-		// Loop until elements displayed is equal to featured count
-		while(count < FEATURED_COUNT)
+		// Loop until featured count is reached
+		for(let i = 0; i < FEATURED_COUNT; i++)
 		{
 			// Get a random number from 0 to comics length
 			let random = Math.floor(Math.random() * comics.length);
-
-			randomIndexes.forEach(function(number)
-			{
-				if(random === number)
-				{
-					isUnique = false;
-				}
-			});
 			
-			if(isUnique)
-			{
-				// Set comic at random index as target
-				var comic = comics[random];
+			// Set comic at random index as target
+			var comic = comics[random];
 
-				// Load HTML block into variable
-				comicElement +=
-				`
-					<div data-id="${comic.id}" class="col-xs-4 col-md-2">
-						<img class="comic-image" src="${comic.image}" alt="${comic.title}">
-						<h4 class="comic-title">${comic.title}</h4>
-						<p class="comic-price">$${comic.price}</p>
-						<button class="btn marvel btn-comic">View Details</button>
-					</div>
-				`;
-
-				count++;
-			}
+			// Load HTML block into variable
+			comicElement +=
+			`
+				<div data-id="${comic.id}" class="col-xs-4 col-md-2">
+					<img class="comic-image" src="${comic.image}" alt="${comic.title}">
+					<h4 class="comic-title">${comic.title}</h4>
+					<p class="comic-price">$${comic.price}</p>
+					<button class="btn marvel btn-comic">View Details</button>
+				</div>
+			`;
 		}
 
 		// Append data to element parent
